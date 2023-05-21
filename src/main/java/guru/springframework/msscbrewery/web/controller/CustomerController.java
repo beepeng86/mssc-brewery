@@ -25,7 +25,7 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.getCustomerById(customerId), HttpStatus.OK);
     }
 
-    @PostMapping({"/{customerId}"})
+    @PostMapping
     public ResponseEntity createCustomer(@RequestBody CustomerDto customerDto) {
         CustomerDto savedDto = customerService.saveNewCustomer(customerDto);
 
